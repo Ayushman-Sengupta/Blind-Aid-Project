@@ -55,9 +55,8 @@ If both left and right are free, the side with more clearance wins. A near tie g
 | Right LED | A1 → 470 Ω → LED long leg, short leg → GND |
 | Motor power | 12 V adapter → shield screw terminal (**+ to +, − to −**) |
 
-The full diagram is in `circuit_diagram.pdf`. Add it to the repo if it isn't there yet.
+The full diagram is in `circuit_diagram.pdf`. 
 
-**Buzzer driver (recommended):** pin → 1 kΩ → transistor base, emitter → GND, collector → buzzer −, buzzer + → 5V. Put a 1N4148 diode across the buzzer with the stripe towards 5V. A 10 kΩ resistor from base to GND stops clicks at power-up.
 
 ## Setup
 
@@ -86,17 +85,7 @@ The full diagram is in `circuit_diagram.pdf`. Add it to the repo if it isn't the
 - Wire the buzzer through a transistor, because Uno pins give only about 8 mA.
 - This is a prototype. **Do not rely on it as a primary mobility aid.**
 
-## Troubleshooting
 
-| Problem | Likely cause |
-|---|---|
-| Motor locked, not spinning | Vref too low, or the coil wires are wrong. Swap one coil pair. |
-| Left and right swapped | flip `LEFT_DIR` |
-| Sensor never detects | check Trig/Echo pins and that VCC is on 5V |
-| Doesn't return to centre | lost steps (raise `STEP_US`) or the Uno reset (add the transistor, diode and 100 µF cap) |
-| Buzzer always on | buzzer + wired straight to 5V, or the transistor is wired wrong |
-
-## Limitations
 
 - Front-mounted only: it covers one rotating sensor on the head.
 - The ultrasonic sensor struggles with soft, angled or very thin objects.
