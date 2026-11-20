@@ -3,7 +3,7 @@
 A head-worn **rotating ultrasonic obstacle detector** for blind and visually impaired people. An HC-SR04 sensor sits on a stepper motor shaft. When something gets too close, the device tells the wearer to **stop**, sweeps a full circle to look around, and then signals **which direction is free** using buzzer beep codes and LEDs.
 
 > Built by Ayushman Sengupta as a learning project in electronics and embedded software.
-> **Scope:** this covers the front-facing sensing and alert part only (see [Limitations](#limitations)).
+> **Scope:** this covers the front-facing sensing and alert part only 
 
 ## Demo
 
